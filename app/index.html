@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <link rel="shortcut icon" href="/favicon.ico">
-    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300|Roboto:300,400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300,400' rel='stylesheet' type='text/css'>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
@@ -32,7 +32,9 @@
 
     <div class="container-smooth">
         <nav id="myNavmenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
-            <a class="navmenu-brand" href="#"><img src="images/moss-logo.svg" alt="MOSS Digital"></a>
+            <a class="navmenu-brand" href="#">
+                <img src="images/moss-logo.svg" alt="MOSS Digital">
+            </a>
             <ul class="nav navmenu-nav">
                 <li class="active"><a href="#">Home</a>
                 </li>
@@ -53,14 +55,35 @@
                 <span class="icon-bar"></span>
             </button>
         </div>
-    </div>
 
-    <div class="container main-container">
-        <div class="alert alert-success">
-            <strong>Success!</strong> Your action has been completed succefully.
+        <div class="container main-container">
+            <div class="alert alert-success">
+                <strong>Success!</strong> Your action has been completed successfully.
+            </div>
+            <div class="row">
+                <div class="col-sm-10 col-md-6 col-centered">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Login</h3>
+                        </div>
+                        <div class="panel-body">
+                            <form role="form">
+                                <div class="form-group">
+                                    <label for="usr">Name:</label>
+                                    <input type="text" class="form-control" id="usr">
+                                </div>
+                                <div class="form-group">
+                                    <label for="pwd">Password:</label>
+                                    <input type="password" class="form-control" id="pwd">
+                                </div>
+                                <a href="dashboard.html" id="loginButton" data-loading-text="Loading..." class="btn btn-primary btn-block" role="button">Let's go!</a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-    <!--/main container-->
+        <!--/main container-->
 
     </div>
     <!--/site container-->
