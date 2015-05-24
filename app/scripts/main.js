@@ -1,6 +1,7 @@
 $(document).ready(function () {
     //login button
-    $("#loginButton").click(function () {
+    $(".loadingButton").click(function () {
         $(this).button('loading');
     });
+    $('.dropdown-toggle').dropdown();
 });
