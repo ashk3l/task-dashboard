@@ -29,12 +29,20 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <nav id="navMenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
-        <a class="navmenu-brand hidden-sm" href="#">
+
+    <div class="navbar navbar-default navbar-fixed-top">
+        <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#navMenu">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+    </div>
+        <nav id="navMenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
+        <a class="navmenu-brand" href="#">
             <img src="images/moss-logo.svg" alt="MOSS Digital">
         </a>
         <ul class="nav navmenu-nav">
-            <li class="active"><a href="#">Home</a>
+            <li><a href="#">Home</a>
             </li>
             <li><a href="#">Tasks</a>
             </li>
@@ -46,18 +54,11 @@
             </li>
         </ul>
     </nav>
-    <div class="navbar navbar-default navbar-fixed-top">
-        <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#navMenu">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-    </div>
-
-    <div class="container-fluid">
-
 
         <div class="container main-container">
+            <div class="alert alert-success">
+                <strong>Success!</strong> Your task has been created.
+            </div>
             <div class="row">
                 <div class="col-sm-12 col-md-6">
                     <div class="panel panel-default">
@@ -217,8 +218,6 @@
         </div>
         <!--/main container-->
 
-    </div>
-    <!--/site container-->
 
 
     <!-- build:js(.) scripts/vendor.js -->
