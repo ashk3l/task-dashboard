@@ -46,7 +46,8 @@ module.exports = function (grunt) {
                         remote: '../',
                         branch: 'build'
                     }
-                },
+                }
+            },
 
                 // Watches files for changes and runs tasks based on the changed files
                 watch: {
