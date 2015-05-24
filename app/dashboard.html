@@ -147,7 +147,7 @@
                             <h3 class="panel-title">Quick actions</h3>
                         </div>
                         <div class="panel-body">
-                            <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#newTask">CREATE NEW TASK</button>
+                            <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#newTask"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span> CREATE NEW TASK</button>
                             <div id="newTask" class="collapse top-buffer">
                                 <form role="form">
                                     <div class="form-group">
@@ -159,18 +159,15 @@
                                         <input type="text" class="form-control" id="share-title">
                                     </div>
                                     <div class="dropdown">
-                                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-                                            ASSIGNEE
+                                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true"><span class="glyphicon glyphicon glyphicon-user" aria-hidden="true"></span> ASSIGNEE
                                             <span class="caret"></span>
                                         </button>
                                         <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">John</a>
                                             </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Joe</a>
                                             </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Sasha</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -202,7 +199,7 @@
                                     <input type="text" class="form-control" id="share-description">
                                 </div>
                                 <div class="fileinput fileinput-new" data-provides="fileinput">
-                                    <span class="btn btn-default btn-file"><span class="fileinput-new">SELECT FILE</span><span class="fileinput-exists">Change</span>
+                                    <span class="btn btn-default btn-file"><span class="glyphicon glyphicon glyphicon-upload" aria-hidden="true"></span><span class="fileinput-new"> SELECT FILE</span><span class="fileinput-exists">Change</span>
                                     <input type="file" name="...">
                                     </span>
                                     <span class="fileinput-filename"></span>

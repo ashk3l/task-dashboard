@@ -49,19 +49,22 @@ button:active
     padding: 0;
     @include fadeIn();
 }
+a.btn,
 .btn-primary,
 .btn-default,
 .btn-info,
 .btn {
     background: $highlight-color;
+    color: $primary-text;
+    border-color: #ccc;
     @include transition(all, 0.2s, ease-in);
     text-transform: uppercase;
-    &:hover {
-        background: darken(#fff, 10%);
-    }
+    &:hover,
     &:active,
     &:focus {
-        background: darken(#fff, 10%);
+        color: $primary-text;
+        background: darken($highlight-color, 10%);
+        border-color: darken(#ccc, 10%);
     }
 }
 .alert-success {
