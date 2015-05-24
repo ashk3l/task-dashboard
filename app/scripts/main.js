@@ -3,5 +3,6 @@ $(document).ready(function () {
     $(".loadingButton").click(function () {
         $(this).button('loading');
     });
+    //initialize dropdowns
     $('.dropdown-toggle').dropdown();
 });
