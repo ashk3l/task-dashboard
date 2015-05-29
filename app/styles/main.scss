@@ -36,7 +36,10 @@ textarea:focus,
 button:focus,
 input:active,
 textarea:active,
-button:active
+button:active,
+.btn:focus, 
+.btn:active:focus,
+.btn.active:focus
 {
     outline: none;
     box-shadow: none;
@@ -104,4 +107,7 @@ ul.navmenu-nav {
 }
 .top-buffer {
     margin-top: 20px;
+}
+.quick-actions .wrap {
+    padding: 1em;
 }
