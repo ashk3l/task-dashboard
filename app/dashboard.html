@@ -37,7 +37,7 @@
             <span class="icon-bar"></span>
         </button>
     </div>
-        <nav id="navMenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
+    <nav id="navMenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
         <a class="navmenu-brand" href="#">
             <img src="images/moss-logo.svg" alt="MOSS Digital">
         </a>
@@ -55,168 +55,202 @@
         </ul>
     </nav>
 
-        <div class="container main-container">
-            <div class="alert alert-success">
-                <strong>Success!</strong> Your task has been created.
-            </div>
-            <div class="row">
-                <div class="col-sm-12 col-md-6">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">New tasks assigned to you</h3>
-                        </div>
-                        <div class="panel-body">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>Project</th>
-                                        <th>Task</th>
-                                        <th>Priority</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Client Name</td>
-                                        <td><a href="#">Visual designs for home page</a>
-                                        </td>
-                                        <td>High</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Client Name</td>
-                                        <td><a href="#">Responsive HTML for contact page</a>
-                                        </td>
-                                        <td>Low</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Client name</td>
-                                        <td><a href="#">Wireframes for iphone app</a>
-                                        </td>
-                                        <td>High</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+    <div class="container main-container">
+        <div class="alert alert-success">
+            <strong>Success!</strong> Your task has been created.
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">New tasks assigned to you</h3>
                     </div>
-                    <!--/panel-->
-                </div>
-                <!--/col-->
-                <div class="col-sm-12 col-md-6">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">Due soon</h3>
-                        </div>
-                        <div class="panel-body">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>Project</th>
-                                        <th>Task</th>
-                                        <th>Due Date</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Client Name</td>
-                                        <td><a href="#">Visual designs for home page</a>
-                                        </td>
-                                        <td>May 31, 2015</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Client Name</td>
-                                        <td><a href="#">Responsive HTML for contact page</a>
-                                        </td>
-                                        <td>June 5, 2015</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Client name</td>
-                                        <td><a href="#">Wireframes for iphone app</a>
-                                        </td>
-                                        <td>June 6, 2015</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                    <div class="panel-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Project</th>
+                                    <th>Task</th>
+                                    <th>Priority</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Client Name</td>
+                                    <td><a href="#">Visual designs for home page</a>
+                                    </td>
+                                    <td>High</td>
+                                </tr>
+                                <tr>
+                                    <td>Client Name</td>
+                                    <td><a href="#">Responsive HTML for contact page</a>
+                                    </td>
+                                    <td>Low</td>
+                                </tr>
+                                <tr>
+                                    <td>Client name</td>
+                                    <td><a href="#">Wireframes for iphone app</a>
+                                    </td>
+                                    <td>High</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                    <!--/panel-->
                 </div>
-                <!--/col-->
+                <!--/panel-->
             </div>
-            <!--/row-->
-            <div class="row">
-                <div class="col-sm-12 col-md-6">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">Quick actions</h3>
-                        </div>
-                        <div class="panel-body">
-                            <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#newTask"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span> CREATE NEW TASK</button>
-                            <div id="newTask" class="collapse top-buffer">
-                                <form role="form">
-                                    <div class="form-group">
-                                        <label for="project">Project:</label>
-                                        <input type="text" class="form-control" id="project">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="title">Title:</label>
-                                        <input type="text" class="form-control" id="share-title">
-                                    </div>
-                                    <div class="dropdown">
-                                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true"><span class="glyphicon glyphicon glyphicon-user" aria-hidden="true"></span> ASSIGNEE
-                                            <span class="caret"></span>
-                                        </button>
-                                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">John</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Joe</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Sasha</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="form-group top-buffer">
-                                        <label for="description">Description:</label>
-                                        <textarea class="form-control" rows="5" id="comment"></textarea>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                        <!--/panel-->
+            <!--/col-->
+            <div class="col-sm-12 col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Due soon</h3>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Project</th>
+                                    <th>Task</th>
+                                    <th>Due Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Client Name</td>
+                                    <td><a href="#">Visual designs for home page</a>
+                                    </td>
+                                    <td>May 31, 2015</td>
+                                </tr>
+                                <tr>
+                                    <td>Client Name</td>
+                                    <td><a href="#">Responsive HTML for contact page</a>
+                                    </td>
+                                    <td>June 5, 2015</td>
+                                </tr>
+                                <tr>
+                                    <td>Client name</td>
+                                    <td><a href="#">Wireframes for iphone app</a>
+                                    </td>
+                                    <td>June 6, 2015</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!--/panel-->
+            </div>
+            <!--/col-->
+        </div>
+        <!--/row-->
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Recent activity</h3>
+                    </div>
+<div class="panel-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Activity</th>
+                                    <th>User</th>
+                                    <th>Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Added a new share "Check out these links"</td>
+                                    <td>Julia
+                                    </td>
+                                    <td>May 31, 2015</td>
+                                </tr>
+                                <tr>
+                                    <td>Added a new task "Create a wireframe of dashboard"</td>
+                                    <td>Ted
+                                    </td>
+                                    <td>May 27, 2015</td>
+                                </tr>
+                                <tr>
+                                    <td>Changed priority to "High" on task RC-123</td>
+                                    <td>Matthew
+                                    </td>
+                                    <td>May 18, 2015</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
 
-                    </div>
                 </div>
-                <!--/col-->
-                <div class="col-sm-12 col-md-6">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">Quick share</h3>
-                        </div>
-                        <div class="panel-body">
+            </div>
+            <!--/col-->
+            <div class="col-sm-12 col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Quick actions</h3>
+                    </div>
+                    <div class="panel-body" id="quick-wrap">
+                        <button type="button" class="btn btn-default js-task-btn" data-toggle="collapse" data-target="#newTask" data-parent="#quick-wrap"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span> ADD NEW TASK</button>
+                        <button type="button" class="btn btn-default js-share-btn" data-toggle="collapse" data-target="#newShare"><span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span> ADD NEW SHARE</button>
+                        
+                        <div class="quick-wrap-panels">
+                        <div id="newTask" class="collapse top-buffer">
                             <form role="form">
+                                <div class="form-group">
+                                    <label for="project">Project:</label>
+                                    <input type="text" class="form-control" id="project">
+                                </div>
                                 <div class="form-group">
                                     <label for="title">Title:</label>
                                     <input type="text" class="form-control" id="share-title">
                                 </div>
-                                <div class="form-group">
-                                    <label for="description">Description:</label>
-                                    <input type="text" class="form-control" id="share-description">
+                                <div class="dropdown">
+                                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true"><span class="glyphicon glyphicon glyphicon-user" aria-hidden="true"></span> ASSIGNEE
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">John</a>
+                                        </li>
+                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Joe</a>
+                                        </li>
+                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Sasha</a>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <div class="fileinput fileinput-new" data-provides="fileinput">
-                                    <span class="btn btn-default btn-file"><span class="glyphicon glyphicon glyphicon-upload" aria-hidden="true"></span><span class="fileinput-new"> SELECT FILE</span><span class="fileinput-exists">Change</span>
-                                    <input type="file" name="...">
-                                    </span>
-                                    <span class="fileinput-filename"></span>
-                                    <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">&times;</a>
+                                <div class="form-group top-buffer">
+                                    <label for="description">Description:</label>
+                                    <textarea class="form-control" rows="5" id="comment"></textarea>
                                 </div>
                             </form>
                         </div>
+                        <div id="newShare" class="collapse top-buffer">
+                        <form role="form">
+                            <div class="form-group">
+                                <label for="title">Title:</label>
+                                <input type="text" class="form-control" id="share-title">
+                            </div>
+                            <div class="form-group">
+                                <label for="description">Description:</label>
+                                <input type="text" class="form-control" id="share-description">
+                            </div>
+                            <div class="fileinput fileinput-new" data-provides="fileinput">
+                                <span class="btn btn-default btn-file"><span class="glyphicon glyphicon glyphicon-upload" aria-hidden="true"></span><span class="fileinput-new"> SELECT FILE</span><span class="fileinput-exists">Change</span>
+                                <input type="file" name="...">
+                                </span>
+                                <span class="fileinput-filename"></span>
+                                <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">&times;</a>
+                            </div>
+                        </form>
                     </div>
-                    <!--/panel-->
+                    </div>
+                        <!--/quick-wrap-panels-->
                 </div>
-                <!--/col-->
+                <!--/panel quick-wrap-->
             </div>
-            <!--/row-->
+            <!--/col-->
         </div>
-        <!--/main container-->
+        <!--/row-->
+    </div>
+    <!--/main container-->
 
 
 
