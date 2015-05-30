@@ -89,6 +89,8 @@
                                 </li>
                                 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">In progress</a>
                                 </li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Needs review</a>
+                                </li>
                                 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Pending approval</a>
                                 </li>
                                 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Complete</a>
@@ -132,126 +134,232 @@
             <!--/col-->
         </div>
         <!--/row-->
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="panel panel-default">
+        <div class="row task-container">
+            <div class="col-sm-12 col-md-6 task">
+                <div class="panel panel-default high-priority">
                     <div class="panel-body">
-                        <table class="table table-hover">
-                            <thead>
-                                <tr>
-                                    <th>Project</th>
-                                    <th>Task</th>
-                                    <th>Assignee</th>
-                                    <th>Priority</th>
-                                    <th>Due Date</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Client Name</td>
-                                    <td><a href="#">Visual designs for home page</a>
-                                    </td>
-                                    <td>Joshua</td>
-                                    <td>High</td>
-                                    <td>May 30, 2015</td>
-                                </tr>
-                                <tr>
-                                    <td>Client Name</td>
-                                    <td><a href="#">Visual designs for home page</a>
-                                    </td>
-                                    <td>Joshua</td>
-                                    <td>High</td>
-                                    <td>May 30, 2015</td>
-                                </tr>
-                                <tr>
-                                    <td>Client Name</td>
-                                    <td><a href="#">Visual designs for home page</a>
-                                    </td>
-                                    <td>Joshua</td>
-                                    <td>High</td>
-                                    <td>May 30, 2015</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <a href="#" class="settings right" data-toggle="modal" data-target="#editModal"><span class="glyphicon glyphicon glyphicon-cog" aria-hidden="true"></span> <p class="sr-only">Update</p></a>
+                        <h3>Complete this task lorem ipsum lorem ipsum</h3>
+                        <p>Ornare habitant a pretium risus eros phasellus a facilisis nibh quam parturient pharetra convallis cras morbi nullam habitasse lacinia a laoreet consequat vestibulum nulla.</p>
+                        <div class="row task-legend">
+                            <div class="col-md-3 project"><span class="glyphicon glyphicon glyphicon-briefcase" aria-hidden="true"></span> Client Name</div>
+                            <div class="col-md-3 assignee"><span class="glyphicon glyphicon glyphicon-user" aria-hidden="true"></span> Sasha</div>
+                            <div class="col-md-3 priority"><span class="glyphicon glyphicon glyphicon-heart" aria-hidden="true"></span> High</div>
+                            <div class="col-md-3 due-date"><span class="glyphicon glyphicon glyphicon-calendar" aria-hidden="true"></span> May 30, 2015</div>
+                        </div>
                     </div>
                 </div>
-                <!--/panel-->
             </div>
-            <!--/col-->
-
+            <!--/task-->
+            <div class="col-sm-12 col-md-6 task">
+                <div class="panel panel-default med-priority">
+                    <div class="panel-body">
+                        <h3>Complete this task lorem ipsum lorem ipsum</h3>
+                        <p>Ornare habitant a pretium risus eros phasellus a facilisis nibh quam parturient pharetra convallis cras morbi nullam habitasse lacinia a laoreet consequat vestibulum nulla.</p>
+                        <div class="row task-legend">
+                            <div class="col-md-3 project"><span class="glyphicon glyphicon glyphicon-briefcase" aria-hidden="true"></span> Client Name</div>
+                            <div class="col-md-3 assignee"><span class="glyphicon glyphicon glyphicon-user" aria-hidden="true"></span> Sasha</div>
+                            <div class="col-md-3 priority"><span class="glyphicon glyphicon glyphicon-heart" aria-hidden="true"></span> Medium</div>
+                            <div class="col-md-3 due-date"><span class="glyphicon glyphicon glyphicon-calendar" aria-hidden="true"></span> May 30, 2015</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/task-->
+        </div>
+        <!--/row-->
+        <div class="row task-container">
+            <div class="col-sm-12 col-md-6 task">
+                <div class="panel panel-default low-priority">
+                    <div class="panel-body">
+                        <h3>Complete this task lorem ipsum lorem ipsum</h3>
+                        <p>Ornare habitant a pretium risus eros phasellus a facilisis nibh quam parturient pharetra convallis cras morbi nullam habitasse lacinia a laoreet consequat vestibulum nulla.</p>
+                        <div class="row task-legend">
+                            <div class="col-md-3 project"><span class="glyphicon glyphicon glyphicon-briefcase" aria-hidden="true"></span> Client Name</div>
+                            <div class="col-md-3 assignee"><span class="glyphicon glyphicon glyphicon-user" aria-hidden="true"></span> Brian</div>
+                            <div class="col-md-3 priority"><span class="glyphicon glyphicon glyphicon-heart" aria-hidden="true"></span> Low</div>
+                            <div class="col-md-3 due-date"><span class="glyphicon glyphicon glyphicon-calendar" aria-hidden="true"></span> May 30, 2015</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/task-->
+            <div class="col-sm-12 col-md-6 task">
+                <div class="panel panel-default low-priority">
+                    <div class="panel-body">
+                        <h3>Complete this task lorem ipsum lorem ipsum</h3>
+                        <p>Ornare habitant a pretium risus eros phasellus a facilisis nibh quam parturient pharetra convallis cras morbi nullam habitasse lacinia a laoreet consequat vestibulum nulla.</p>
+                        <div class="row task-legend">
+                            <div class="col-md-3 project"><span class="glyphicon glyphicon glyphicon-briefcase" aria-hidden="true"></span> Client Name</div>
+                            <div class="col-md-3 assignee"><span class="glyphicon glyphicon glyphicon-user" aria-hidden="true"></span> John</div>
+                            <div class="col-md-3 priority"><span class="glyphicon glyphicon glyphicon-heart" aria-hidden="true"></span> Low</div>
+                            <div class="col-md-3 due-date"><span class="glyphicon glyphicon glyphicon-calendar" aria-hidden="true"></span> May 30, 2015</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/task-->
         </div>
         <!--/row-->
     </div>
     <!--/main container-->
 
-        <!-- Modal -->
-        <div id="popUpModal" class="modal fade" role="dialog">
-            <div class="modal-dialog">
-                <!-- Modal content-->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">ADD TASK</h4>
-                    </div>
-                    <div class="modal-body">
-                        <div id="newTask">
-                            <form role="form">
-                                <div class="form-group">
-                                    <label for="project">Project:</label>
-                                    <input type="text" class="form-control" id="project">
-                                </div>
-                                <div class="form-group">
-                                    <label for="share-title">Title:</label>
-                                    <input type="text" class="form-control" id="share-title">
-                                </div>
-                                <div class="form-group">
-                                    <label for="date-picker">Due date:</label>
-                                    <div class='input-group date date-picker-widget'>
-                                        <input type='text' class="form-control" id="date-picker"/>
-                                        <span class="input-group-addon">
+    <!-- Modal -->
+    <div id="popUpModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">ADD TASK</h4>
+                </div>
+                <div class="modal-body">
+                    <div id="newTask">
+                        <form role="form">
+                            <div class="form-group">
+                                <label for="project">Project:</label>
+                                <input type="text" class="form-control" id="project">
+                            </div>
+                            <div class="form-group">
+                                <label for="share-title">Title:</label>
+                                <input type="text" class="form-control" id="share-title">
+                            </div>
+                            <div class="form-group">
+                                <label for="date-picker">Due date:</label>
+                                <div class='input-group date date-picker-widget'>
+                                    <input type='text' class="form-control" id="date-picker" />
+                                    <span class="input-group-addon">
                         <span class="glyphicon glyphicon-calendar"></span>
-                                        </span>
-                                    </div>
+                                    </span>
                                 </div>
-                                <div class="dropdown">
-                                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true"><span class="glyphicon glyphicon glyphicon-user" aria-hidden="true"></span> ASSIGNEE
+                            </div>
+                            <div class="dropdown">
+                                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true"><span class="glyphicon glyphicon glyphicon-user" aria-hidden="true"></span> ASSIGNEE
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">John</a>
+                                    </li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Joe</a>
+                                    </li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Sasha</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="form-group top-buffer">
+                                <label for="description">Description:</label>
+                                <textarea class="form-control" rows="5" id="comment"></textarea>
+                            </div>
+                            <hr>
+                        </form>
+                    </div>
+                    <!--/new-task-->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">SUBMIT</button>
+                </div>
+            </div>
+        </div>
+        <!--/modal-dialog-->
+    </div>
+    <!--/pop-up-modal-->
+
+
+    <!-- Modal -->
+    <div id="editModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">TASK DETAILS</h4>
+                </div>
+                <div class="modal-body">
+                    <div id="editTask" class="editTask">
+                        <form role="form">
+                            <div class="form-group">
+                                <label for="project">Project:</label>
+                                <input type="text" class="form-control" id="project">
+                            </div>
+                            <div class="form-group">
+                                <label for="share-title">Title:</label>
+                                <input type="text" class="form-control" id="share-title">
+                            </div>
+                            <div class="form-group">
+                                <label for="date-picker">Due date:</label>
+                                <div class='input-group date date-picker-widget'>
+                                    <input type='text' class="form-control" id="date-picker" />
+                                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true"><span class="glyphicon glyphicon glyphicon-user" aria-hidden="true"></span> ASSIGNEE
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">John</a>
+                                    </li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Joe</a>
+                                    </li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Sasha</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="form-group top-buffer">
+                                <label for="description">Description:</label>
+                                <textarea class="form-control" rows="5" id="comment"></textarea>
+                            </div>
+                            <hr>
+                            <div class="form-group top-buffer">
+                                <label for="description">Add comment:</label>
+                                <textarea class="form-control" rows="5" id="comment"></textarea>
+                            </div>
+                            <hr>
+                            <div class="modal-actions">
+                                <div class="dropdown left">
+                                    <button class="btn btn-default dropdown-toggle" type="button" id="statusMenu" data-toggle="dropdown" aria-expanded="true"><span class="glyphicon glyphicon glyphicon-flag" aria-hidden="true"></span> STATUS
                                         <span class="caret"></span>
                                     </button>
-                                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">John</a>
+                                    <ul class="dropdown-menu" role="menu" aria-labelledby="statusMenu">
+                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Not started</a>
                                         </li>
-                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Joe</a>
+                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">In progress</a>
                                         </li>
-                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Sasha</a>
+                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Needs review</a>
+                                        </li>
+                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Pending approval</a>
+                                        </li>
+                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Complete</a>
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="form-group top-buffer">
-                                    <label for="description">Description:</label>
-                                    <textarea class="form-control" rows="5" id="comment"></textarea>
-                                </div>
+                                <button class="btn btn-defaultleft button-padding-left left" type="button"><span class="glyphicon glyphicon glyphicon-minus" aria-hidden="true"></span> DELETE TASK
+                                </button>
+                                <div class="clearfix"></div>
                                 <hr>
-                                <p>Add file:</p>
-                                <div class="fileinput fileinput-new" data-provides="fileinput">
-                                    <span class="btn btn-default btn-file"><span class="glyphicon glyphicon glyphicon-upload" aria-hidden="true"></span><span class="fileinput-new"> SELECT FILE</span><span class="fileinput-exists">Change</span>
-                                    <input type="file" name="...">
-                                    </span>
-                                    <span class="fileinput-filename"></span>
-                                    <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">&times;</a>
+                                <div class="comment">
+                                    <p><strong>Comment from Sasha:</strong>
+                                    </p>
+                                    <p>A montes odio pharetra aptent vel ipsum praesent vestibulum parturient a eget risus accumsan hendrerit scelerisque vestibulum nascetur id condimentum auctor et. Ullamcorper eu cras quisque nam dui placerat condimentum egestas molestie est per ad cubilia eget.</p>
+                                    <small>Added May 29, 2015 at 8:04pm <a href="#">edit</a> | <a href="#">delete</a></small>
                                 </div>
-                            </form>
-                        </div>
-                        <!--/new-task-->
+                            </div>
+                        </form>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">SUBMIT</button>
-                    </div>
+                    <!--/new-task-->
                 </div>
-
+                <div class="clearfix"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default right button-padding-left" data-dismiss="modal">SUBMIT</button>
+                    <button type="button" class="btn btn-default right" data-dismiss="modal">CANCEL</button>
+                </div>
             </div>
-            <!--/modal-dialog-->
         </div>
-        <!--/pop-up-modal-->
+        <!--/modal-dialog-->
+    </div>
+    <!--/pop-up-modal-->
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->

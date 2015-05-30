@@ -32,7 +32,10 @@ a:active {
     }
 }
 hr {
-    border-color: #ddd;
+    border-color: $light-color;
+}
+strong {
+    font-weight: bold;
 }
 input:focus,
 textarea:focus,
@@ -115,6 +118,9 @@ ul.navmenu-nav {
 .left {
     float: left;
 }
+.right {
+    float: right;
+}
 .button-padding-left {
     margin-left: 20px;
 }
@@ -134,4 +140,32 @@ ul.navmenu-nav {
             display: block;
         }
     }
+}
+.task-container {
+    h3 {
+        margin-bottom: 20px;
+    }
+    .task {
+        .high-priority {
+            border-bottom: 2px solid #F44336;
+        }
+        .med-priority {
+            border-bottom: 2px solid #FFC107;
+        }
+        .low-priority {
+            border-bottom: 2px solid $dark-primary-color;
+        }
+        .settings {
+            font-size: 1.3em;
+            color: $light-color;
+            clear: both;
+        }
+    }
+    .task-legend {
+        color: $dark-primary-color;
+        padding: 10px 0;
+    }
+}
+.editTask .modal-actions {
+    margin-bottom: 20px;
 }
