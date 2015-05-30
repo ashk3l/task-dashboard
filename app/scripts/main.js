@@ -5,5 +5,8 @@ $(document).ready(function () {
     });
     //initialize dropdowns
     $('.dropdown-toggle').dropdown();
+    
+    //datepicker
+     $('.date-picker-widget').datetimepicker();
 
 });
