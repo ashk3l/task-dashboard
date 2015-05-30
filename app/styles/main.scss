@@ -31,16 +31,18 @@ a:active {
         color: darken($primary-color, 10%);
     }
 }
+hr {
+    border-color: #ddd;
+}
 input:focus,
 textarea:focus,
 button:focus,
 input:active,
 textarea:active,
 button:active,
-.btn:focus, 
+.btn:focus,
 .btn:active:focus,
-.btn.active:focus
-{
+.btn.active:focus {
     outline: none;
     box-shadow: none;
     outline-color: transparent;
@@ -62,9 +64,7 @@ a.btn,
     border-color: #ccc;
     @include transition(all, 0.2s, ease-in);
     text-transform: uppercase;
-    &:hover,
-    &:active,
-    &:focus {
+    &:hover, &:active, &:focus {
         color: $primary-text;
         background: darken($highlight-color, 10%);
         border-color: darken(#ccc, 10%);
@@ -110,4 +110,27 @@ ul.navmenu-nav {
 }
 .quick-actions .wrap {
     padding: 1em;
+}
+.left {
+    float: left;
+}
+.button-padding-left {
+    margin-left: 20px;
+}
+.sub-page {
+    .page-head {
+        overflow: hidden;
+        clear: both;
+        width: 100%;
+        
+        h1 {
+            float: left;
+        }
+    }
+    .action-bar {
+
+        .dropdown {
+            display: block;
+        }
+    }
 }

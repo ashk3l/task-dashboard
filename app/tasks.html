@@ -13,6 +13,7 @@
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="bower_components/jasny-bootstrap/dist/css/jasny-bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -55,40 +56,153 @@
         </ul>
     </nav>
 
-    <div class="container main-container">
-        <h1>Tasks</h1>
-        <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#newTask">Add task</button>
-        <div id="newTask" class="collapse top-buffer">
-            <form role="form">
-                <div class="form-group">
-                    <label for="project">Project:</label>
-                    <input type="text" class="form-control" id="project">
-                </div>
-                <div class="form-group">
-                    <label for="title">Title:</label>
-                    <input type="text" class="form-control" id="share-title">
-                </div>
-                <div class="dropdown">
-                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true"><span class="glyphicon glyphicon glyphicon-user" aria-hidden="true"></span> ASSIGNEE
-                        <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">John</a>
-                        </li>
-                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Joe</a>
-                        </li>
-                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Sasha</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="form-group top-buffer">
-                    <label for="description">Description:</label>
-                    <textarea class="form-control" rows="5" id="comment"></textarea>
-                </div>
-            </form>
-            <button type="button" class="btn btn-default">SUBMIT</button>
+    <div class="container main-container sub-page">
+        <div class="page-head">
+            <h1>Tasks</h1>
+            <button type="button" class="btn btn-default button-padding-left top-buffer" data-toggle="modal" data-target="#popUpModal">Add task</button>
         </div>
+        <!-- Modal -->
+        <div id="popUpModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">ADD TASK</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div id="newTask">
+                            <form role="form">
+                                <div class="form-group">
+                                    <label for="project">Project:</label>
+                                    <input type="text" class="form-control" id="project">
+                                </div>
+                                <div class="form-group">
+                                    <label for="share-title">Title:</label>
+                                    <input type="text" class="form-control" id="share-title">
+                                </div>
+                                <div class="form-group">
+                                    <label for="date-picker">Due date:</label>
+                                    <div class='input-group date date-picker-widget'>
+                                        <input type='text' class="form-control" id="date-picker"/>
+                                        <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="dropdown">
+                                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true"><span class="glyphicon glyphicon glyphicon-user" aria-hidden="true"></span> ASSIGNEE
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">John</a>
+                                        </li>
+                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Joe</a>
+                                        </li>
+                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Sasha</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="form-group top-buffer">
+                                    <label for="description">Description:</label>
+                                    <textarea class="form-control" rows="5" id="comment"></textarea>
+                                </div>
+                                <hr>
+                                <p>Add file:</p>
+                                <div class="fileinput fileinput-new" data-provides="fileinput">
+                                    <span class="btn btn-default btn-file"><span class="glyphicon glyphicon glyphicon-upload" aria-hidden="true"></span><span class="fileinput-new"> SELECT FILE</span><span class="fileinput-exists">Change</span>
+                                    <input type="file" name="...">
+                                    </span>
+                                    <span class="fileinput-filename"></span>
+                                    <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">&times;</a>
+                                </div>
+                            </form>
+                        </div>
+                        <!--/new-task-->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">SUBMIT</button>
+                    </div>
+                </div>
+
+            </div>
+            <!--/modal-dialog-->
+        </div>
+
+
+
         <hr>
+        <div class="row action-bar">
+            <div class="col-sm-12">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="dropdown left">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="assignee" data-toggle="dropdown" aria-expanded="true"><span class="glyphicon glyphicon glyphicon-user" aria-hidden="true"></span> ASSIGNEE
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="assignee">
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">John</a>
+                                </li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Joe</a>
+                                </li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Sasha</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--/dropdown-->
+                        <div class="dropdown left button-padding-left">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="priority" data-toggle="dropdown" aria-expanded="true"><span class="glyphicon glyphicon glyphicon-flag" aria-hidden="true"></span> STATUS
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="priority">
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Not started</a>
+                                </li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">In progress</a>
+                                </li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Pending approval</a>
+                                </li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Complete</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--/dropdown-->
+                        <div class="dropdown left button-padding-left">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="priority" data-toggle="dropdown" aria-expanded="true"><span class="glyphicon glyphicon glyphicon-briefcase" aria-hidden="true"></span> PROJECT
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="priority">
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Client name</a>
+                                </li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Client name</a>
+                                </li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Client name</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--/dropdown-->
+                        <div class="dropdown left button-padding-left">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="priority" data-toggle="dropdown" aria-expanded="true"><span class="glyphicon glyphicon glyphicon-heart" aria-hidden="true"></span> PRIORITY
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="priority">
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Low</a>
+                                </li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Medium</a>
+                                </li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">High</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--/dropdown-->
+                    </div>
+                    <!--/panel-body-->
+                </div>
+                <!--/panel-->
+            </div>
+            <!--/col-->
+        </div>
+        <!--/row-->
         <div class="row">
             <div class="col-sm-12">
                 <div class="panel panel-default">
@@ -98,7 +212,9 @@
                                 <tr>
                                     <th>Project</th>
                                     <th>Task</th>
+                                    <th>Assignee</th>
                                     <th>Priority</th>
+                                    <th>Due Date</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -106,19 +222,25 @@
                                     <td>Client Name</td>
                                     <td><a href="#">Visual designs for home page</a>
                                     </td>
+                                    <td>Joshua</td>
                                     <td>High</td>
+                                    <td>May 30, 2015</td>
                                 </tr>
                                 <tr>
                                     <td>Client Name</td>
-                                    <td><a href="#">Responsive HTML for contact page</a>
+                                    <td><a href="#">Visual designs for home page</a>
                                     </td>
-                                    <td>Low</td>
+                                    <td>Joshua</td>
+                                    <td>High</td>
+                                    <td>May 30, 2015</td>
                                 </tr>
                                 <tr>
-                                    <td>Client name</td>
-                                    <td><a href="#">Wireframes for iphone app</a>
+                                    <td>Client Name</td>
+                                    <td><a href="#">Visual designs for home page</a>
                                     </td>
+                                    <td>Joshua</td>
                                     <td>High</td>
+                                    <td>May 30, 2015</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -147,11 +269,12 @@
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js"></script>
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js"></script>
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/scrollspy.js"></script>
-    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js"></script>
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/jasny-bootstrap/dist/js/jasny-bootstrap.js"></script>
+    <script src="bower_components/moment/min/moment.min.js"></script>
+    <script src="bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
