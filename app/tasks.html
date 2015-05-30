@@ -154,6 +154,7 @@
             <div class="col-sm-12 col-md-6 task">
                 <div class="panel panel-default med-priority">
                     <div class="panel-body">
+                        <a href="#" class="settings right" data-toggle="modal" data-target="#editModal"><span class="glyphicon glyphicon glyphicon-cog" aria-hidden="true"></span> <p class="sr-only">Update</p></a>
                         <h3>Complete this task lorem ipsum lorem ipsum</h3>
                         <p>Ornare habitant a pretium risus eros phasellus a facilisis nibh quam parturient pharetra convallis cras morbi nullam habitasse lacinia a laoreet consequat vestibulum nulla.</p>
                         <div class="row task-legend">
@@ -172,6 +173,7 @@
             <div class="col-sm-12 col-md-6 task">
                 <div class="panel panel-default low-priority">
                     <div class="panel-body">
+                        <a href="#" class="settings right" data-toggle="modal" data-target="#editModal"><span class="glyphicon glyphicon glyphicon-cog" aria-hidden="true"></span> <p class="sr-only">Update</p></a>
                         <h3>Complete this task lorem ipsum lorem ipsum</h3>
                         <p>Ornare habitant a pretium risus eros phasellus a facilisis nibh quam parturient pharetra convallis cras morbi nullam habitasse lacinia a laoreet consequat vestibulum nulla.</p>
                         <div class="row task-legend">
@@ -187,6 +189,7 @@
             <div class="col-sm-12 col-md-6 task">
                 <div class="panel panel-default low-priority">
                     <div class="panel-body">
+                        <a href="#" class="settings right" data-toggle="modal" data-target="#editModal"><span class="glyphicon glyphicon glyphicon-cog" aria-hidden="true"></span> <p class="sr-only">Update</p></a>
                         <h3>Complete this task lorem ipsum lorem ipsum</h3>
                         <p>Ornare habitant a pretium risus eros phasellus a facilisis nibh quam parturient pharetra convallis cras morbi nullam habitasse lacinia a laoreet consequat vestibulum nulla.</p>
                         <div class="row task-legend">
@@ -206,7 +209,7 @@
 
     <!-- Modal -->
     <div id="popUpModal" class="modal fade" role="dialog">
-        <div class="modal-dialog modal-lg">
+        <div class="modal-dialog">
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
@@ -267,7 +270,7 @@
 
     <!-- Modal -->
     <div id="editModal" class="modal fade" role="dialog">
-        <div class="modal-dialog modal-lg">
+        <div class="modal-dialog">
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
@@ -294,7 +297,7 @@
                                     </span>
                                 </div>
                             </div>
-                            <div class="dropdown">
+                            <div class="dropdown left">
                                 <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true"><span class="glyphicon glyphicon glyphicon-user" aria-hidden="true"></span> ASSIGNEE
                                     <span class="caret"></span>
                                 </button>
@@ -307,18 +310,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="form-group top-buffer">
-                                <label for="description">Description:</label>
-                                <textarea class="form-control" rows="5" id="comment"></textarea>
-                            </div>
-                            <hr>
-                            <div class="form-group top-buffer">
-                                <label for="description">Add comment:</label>
-                                <textarea class="form-control" rows="5" id="comment"></textarea>
-                            </div>
-                            <hr>
-                            <div class="modal-actions">
-                                <div class="dropdown left">
+                            <div class="dropdown left button-padding-left">
                                     <button class="btn btn-default dropdown-toggle" type="button" id="statusMenu" data-toggle="dropdown" aria-expanded="true"><span class="glyphicon glyphicon glyphicon-flag" aria-hidden="true"></span> STATUS
                                         <span class="caret"></span>
                                     </button>
@@ -335,9 +327,20 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <button class="btn btn-defaultleft button-padding-left left" type="button"><span class="glyphicon glyphicon glyphicon-minus" aria-hidden="true"></span> DELETE TASK
+                            <div class="clearfix"></div>
+                            <div class="form-group top-buffer">
+                                <label for="description">Description:</label>
+                                <textarea class="form-control" rows="5" id="comment"></textarea>
+                            </div>
+                            <hr>
+                            <div class="form-group top-buffer">
+                                <label for="description">Add comment:</label>
+                                <textarea class="form-control" rows="5" id="comment"></textarea>
+                            </div>
+                            <hr>
+                            <div class="modal-actions">
+                                <button class="btn btn-defaultleft" type="button"><span class="glyphicon glyphicon glyphicon-minus" aria-hidden="true"></span> DELETE TASK
                                 </button>
-                                <div class="clearfix"></div>
                                 <hr>
                                 <div class="comment">
                                     <p><strong>Comment from Sasha:</strong>
