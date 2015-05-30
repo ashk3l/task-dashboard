@@ -215,7 +215,7 @@ module.exports = function (grunt) {
             app: {
                 ignorePath: /^\/|\.\.\//,
                 src: ['<%= config.app %>/index.html'],
-                //exclude: ['bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js']
+                exclude: ['bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js']
             },
             sass: {
                 src: ['<%= config.app %>/styles/{,*/}*.{scss,sass}'],
@@ -345,7 +345,7 @@ module.exports = function (grunt) {
             'images/{,*/}*.webp',
             '{,*/}*.html',
             'styles/fonts/{,*/}*.*',
-            'bower_components/sass-bootstrap/fonts/*.*'
+            'bower_components/bootstrap/fonts/*.*'
           ]
         }, {
                     src: 'node_modules/apache-server-configs/dist/.htaccess',
@@ -354,7 +354,7 @@ module.exports = function (grunt) {
                     expand: true,
                     dot: true,
                     cwd: '.',
-                    src: 'bower_components/bootstrap-sass-official/assets/fonts/bootstrap/*',
+                    src: 'bower_components/bootstrap/fonts/*',
                     dest: '<%= config.dist %>'
         }]
             },
