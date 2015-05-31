@@ -139,6 +139,14 @@ ul.navmenu-nav {
             display: block;
             padding: 5px 5px 5px 0;
         }
+        
+        a {
+            color: #212121; 
+            
+            &:hover {
+                text-decoration: none;
+            }
+        }
     }
 }
 .task-container {
