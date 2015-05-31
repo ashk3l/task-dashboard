@@ -137,6 +137,7 @@ ul.navmenu-nav {
 
         .dropdown {
             display: block;
+            padding: 5px 5px 5px 0;
         }
     }
 }
@@ -146,13 +147,22 @@ ul.navmenu-nav {
     }
     .task {
         .high-priority {
-            border-bottom: 2px solid #F44336;
+            border-bottom: 2px solid $priority-high;
+            .task-legend {
+                color: $priority-high;
+            }
         }
         .med-priority {
-            border-bottom: 2px solid #FFC107;
+            border-bottom: 2px solid $priority-medium;
+            .task-legend {
+                color: $priority-medium;
+            }
         }
         .low-priority {
             border-bottom: 2px solid $dark-primary-color;
+            .task-legend {
+                color: $dark-primary-color;
+            }
         }
         .settings {
             font-size: 1.3em;
@@ -160,9 +170,11 @@ ul.navmenu-nav {
             clear: both;
         }
     }
-    .task-legend {
-        color: $dark-primary-color;
-        padding: 10px 0;
+    @media(min-width:768px){
+        .task-legend div {
+            float:left;
+            padding-right: 25px;
+        }
     }
 }
 .editTask .modal-actions {
