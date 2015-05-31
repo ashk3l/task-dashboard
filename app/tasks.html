@@ -66,11 +66,13 @@
             <div class="col-sm-12">
                 <div class="panel panel-default">
                     <div class="panel-body">
-                        <div class="dropdown left first">
+                        <div class="dropdown left first"  data-filter-group="assignee">
                             <button class="btn btn-default dropdown-toggle" type="button" id="assignee" data-toggle="dropdown" aria-expanded="true"><span class="glyphicon glyphicon glyphicon-user" aria-hidden="true"></span> ASSIGNEE
                                 <span class="caret"></span>
                             </button>
                             <ul class="dropdown-menu" role="menu" aria-labelledby="assignee">
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-filter="">Any</a>
+                                </li>
                                 <li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-filter=".js-john">John</a>
                                 </li>
                                 <li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-filter=".js-joe">Joe</a>
@@ -80,11 +82,13 @@
                             </ul>
                         </div>
                         <!--/dropdown-->
-                        <div class="dropdown left">
+                        <div class="dropdown left" data-filter-group="status">
                             <button class="btn btn-default dropdown-toggle" type="button" id="priority" data-toggle="dropdown" aria-expanded="true"><span class="glyphicon glyphicon glyphicon-flag" aria-hidden="true"></span> STATUS
                                 <span class="caret"></span>
                             </button>
                             <ul class="dropdown-menu" role="menu" aria-labelledby="priority">
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-filter="">Any</a>
+                                </li>
                                 <li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-filter=".js-not-started">Not started</a>
                                 </li>
                                 <li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-filter=".js-in-progress">In progress</a>
@@ -98,11 +102,13 @@
                             </ul>
                         </div>
                         <!--/dropdown-->
-                        <div class="dropdown left">
+                        <div class="dropdown left"  data-filter-group="project">
                             <button class="btn btn-default dropdown-toggle" type="button" id="priority" data-toggle="dropdown" aria-expanded="true"><span class="glyphicon glyphicon glyphicon-briefcase" aria-hidden="true"></span> PROJECT
                                 <span class="caret"></span>
                             </button>
                             <ul class="dropdown-menu" role="menu" aria-labelledby="priority">
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-filter="">Any</a>
+                                </li>
                                 <li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-filter=".js-client-one">Client one</a>
                                 </li>
                                 <li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-filter=".js-client-two">Client two</a>
@@ -112,11 +118,13 @@
                             </ul>
                         </div>
                         <!--/dropdown-->
-                        <div class="dropdown left">
+                        <div class="dropdown left" data-filter-group="priority">
                             <button class="btn btn-default dropdown-toggle" type="button" id="priority" data-toggle="dropdown" aria-expanded="true"><span class="glyphicon glyphicon glyphicon-heart" aria-hidden="true"></span> PRIORITY
                                 <span class="caret"></span>
                             </button>
                             <ul class="dropdown-menu" role="menu" aria-labelledby="priority">
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-filter="">Any</a>
+                                </li>
                                 <li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-filter=".js-low-priority">Low</a>
                                 </li>
                                 <li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-filter=".js-medium-priority">Medium</a>
@@ -126,10 +134,6 @@
                             </ul>
                         </div>
                         <!--/dropdown-->
-                        <div class="dropdown left isotope-reset">
-                            <button class="btn btn-default reset" type="button" id="view-all"><span class="glyphicon glyphicon glyphicon-eye-open" aria-hidden="true"></span><a role="menuitem" href="#" tabindex="-1" data-filter="*"> VIEW ALL</a>
-                            </button>
-                        </div>
                     </div>
                     <!--/panel-body-->
                 </div>
@@ -167,7 +171,7 @@
                             <div class="col-sm-12 task-legend">
                                 <div><span class="glyphicon glyphicon glyphicon-briefcase" aria-hidden="true"></span> Client Two</div>
                                 <div><span class="glyphicon glyphicon glyphicon-user" aria-hidden="true"></span> Sasha</div>
-                                    <div><span class="glyphicon glyphicon glyphicon-flag" aria-hidden="true"></span> Not started</div>
+                                    <div><span class="glyphicon glyphicon glyphicon-flag" aria-hidden="true"></span> In progress</div>
                                     <div><span class="glyphicon glyphicon glyphicon-calendar" aria-hidden="true"></span> Due: May 30, 2015</div>
                                 </div>
                             </div>
@@ -193,8 +197,26 @@
                 </div>
             </div>
             <!--/task-->
-            <div class="col-sm-12 col-md-6 task js-low-priority js-pending-approval js-joe js-client-one">
+            <div class="col-sm-12 col-md-6 task js-low-priority js-pending-approval js-sasha js-client-one">
                 <div class="panel panel-default low-priority">
+                    <div class="panel-body">
+                        <a href="#" class="settings right" data-toggle="modal" data-target="#editModal"><span class="glyphicon glyphicon glyphicon-cog" aria-hidden="true"></span> <p class="sr-only">Update</p></a>
+                        <h3>Complete this task lorem ipsum lorem ipsum</h3>
+                        <p>Ornare habitant a pretium risus eros phasellus a facilisis nibh quam parturient pharetra convallis cras morbi nullam habitasse lacinia a laoreet consequat vestibulum nulla.</p>
+                        <div class="row top-buffer">
+                            <div class="col-sm-12 task-legend">
+                                <div><span class="glyphicon glyphicon glyphicon-briefcase" aria-hidden="true"></span> Client One</div>
+                                <div><span class="glyphicon glyphicon glyphicon-user" aria-hidden="true"></span> Sasha</div>
+                                <div><span class="glyphicon glyphicon glyphicon-flag" aria-hidden="true"></span> Pending approval</div>
+                                <div><span class="glyphicon glyphicon glyphicon-calendar" aria-hidden="true"></span> Due: May 30, 2015</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/task-->
+             <div class="col-sm-12 col-md-6 task js-medium-priority js-pending-approval js-joe js-client-one">
+                <div class="panel panel-default med-priority">
                     <div class="panel-body">
                         <a href="#" class="settings right" data-toggle="modal" data-target="#editModal"><span class="glyphicon glyphicon glyphicon-cog" aria-hidden="true"></span> <p class="sr-only">Update</p></a>
                         <h3>Complete this task lorem ipsum lorem ipsum</h3>
@@ -204,6 +226,42 @@
                                 <div><span class="glyphicon glyphicon glyphicon-briefcase" aria-hidden="true"></span> Client One</div>
                                 <div><span class="glyphicon glyphicon glyphicon-user" aria-hidden="true"></span> Joe</div>
                                 <div><span class="glyphicon glyphicon glyphicon-flag" aria-hidden="true"></span> Pending approval</div>
+                                <div><span class="glyphicon glyphicon glyphicon-calendar" aria-hidden="true"></span> Due: May 30, 2015</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/task-->
+             <div class="col-sm-12 col-md-6 task js-med-priority js-pending-approval js-john js-client-one">
+                <div class="panel panel-default med-priority">
+                    <div class="panel-body">
+                        <a href="#" class="settings right" data-toggle="modal" data-target="#editModal"><span class="glyphicon glyphicon glyphicon-cog" aria-hidden="true"></span> <p class="sr-only">Update</p></a>
+                        <h3>Complete this task lorem ipsum lorem ipsum</h3>
+                        <p>Ornare habitant a pretium risus eros phasellus a facilisis nibh quam parturient pharetra convallis cras morbi nullam habitasse lacinia a laoreet consequat vestibulum nulla.</p>
+                        <div class="row top-buffer">
+                            <div class="col-sm-12 task-legend">
+                                <div><span class="glyphicon glyphicon glyphicon-briefcase" aria-hidden="true"></span> Client One</div>
+                                <div><span class="glyphicon glyphicon glyphicon-user" aria-hidden="true"></span> John</div>
+                                <div><span class="glyphicon glyphicon glyphicon-flag" aria-hidden="true"></span> Pending approval</div>
+                                <div><span class="glyphicon glyphicon glyphicon-calendar" aria-hidden="true"></span> Due: May 30, 2015</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/task-->
+             <div class="col-sm-12 col-md-6 task js-not-started js-high-priority js-john js-client-two">
+                <div class="panel panel-default high-priority">
+                    <div class="panel-body">
+                        <a href="#" class="settings right" data-toggle="modal" data-target="#editModal"><span class="glyphicon glyphicon glyphicon-cog" aria-hidden="true"></span> <p class="sr-only">Update</p></a>
+                        <h3>Complete this task lorem ipsum lorem ipsum</h3>
+                        <p>Ornare habitant a pretium risus eros phasellus a facilisis nibh quam parturient pharetra convallis cras morbi nullam habitasse lacinia a laoreet consequat vestibulum nulla.</p>
+                        <div class="row top-buffer">
+                            <div class="col-sm-12 task-legend">
+                                <div><span class="glyphicon glyphicon glyphicon-briefcase" aria-hidden="true"></span> Client Two</div>
+                                <div><span class="glyphicon glyphicon glyphicon-user" aria-hidden="true"></span> John</div>
+                                <div><span class="glyphicon glyphicon glyphicon-flag" aria-hidden="true"></span> Not started</div>
                                 <div><span class="glyphicon glyphicon glyphicon-calendar" aria-hidden="true"></span> Due: May 30, 2015</div>
                             </div>
                         </div>

@@ -16,20 +16,45 @@ $(document).ready(function () {
         layoutMode: 'fitRows'
     });
 
-    // filter items on button click
-    $('.action-bar .dropdown ul.dropdown-menu li').on('click', 'a', function () {
-        var $container = $('.task-container');
+    //define isotope variables
+    var $container = $('.task-container');
+    filters = {};
 
-        var filterValue = $(this).attr('data-filter');
+//    // filter items on button click
+//    $('.action-bar .dropdown ul.dropdown-menu li').on('click', 'a', function () {
+//        var filterValue = $(this).attr('data-filter');
+//        $container.isotope({
+//            filter: filterValue
+//        });
+//    });
+
+
+    
+    // store filter for each group
+    var filters = {};
+
+    $('.action-bar .dropdown ul.dropdown-menu li').on('click', 'a', function () {
+        var $this = $(this);
+        // get group key
+        var $dropdownGroup = $this.parents('.dropdown');
+        var filterGroup = $dropdownGroup.attr('data-filter-group');
+        // set filter for group
+        filters[filterGroup] = $this.attr('data-filter');
+        // combine filters
+        var filterValue = concatValues(filters);
         $container.isotope({
             filter: filterValue
         });
     });
+
+    // flatten object by concatting values
+    function concatValues(obj) {
+        var value = '';
+        for (var prop in obj) {
+            value += obj[prop];
+        }
+        return value;
+    }
     
-    $(".isotope-reset button.reset a").click(function(){
-        $(".task-container").isotope({
-            filter: '*'
-        });
-    });
 
 });
