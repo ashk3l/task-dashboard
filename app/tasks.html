@@ -71,11 +71,11 @@
                                 <span class="caret"></span>
                             </button>
                             <ul class="dropdown-menu" role="menu" aria-labelledby="assignee">
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">John</a>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-filter=".js-john">John</a>
                                 </li>
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Joe</a>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-filter=".js-joe">Joe</a>
                                 </li>
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Sasha</a>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-filter=".js-sasha">Sasha</a>
                                 </li>
                             </ul>
                         </div>
@@ -85,15 +85,15 @@
                                 <span class="caret"></span>
                             </button>
                             <ul class="dropdown-menu" role="menu" aria-labelledby="priority">
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Not started</a>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-filter=".js-not-started">Not started</a>
                                 </li>
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">In progress</a>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-filter=".js-in-progress">In progress</a>
                                 </li>
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Needs review</a>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-filter=".js-needs-review">Needs review</a>
                                 </li>
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Pending approval</a>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-filter=".js-pending-approval">Pending approval</a>
                                 </li>
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Complete</a>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-filter=".js-complete">Complete</a>
                                 </li>
                             </ul>
                         </div>
@@ -103,11 +103,11 @@
                                 <span class="caret"></span>
                             </button>
                             <ul class="dropdown-menu" role="menu" aria-labelledby="priority">
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Client name</a>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-filter=".js-client-one">Client one</a>
                                 </li>
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Client name</a>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-filter=".js-client-two">Client two</a>
                                 </li>
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Client name</a>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-filter=".js-client-three">Client three</a>
                                 </li>
                             </ul>
                         </div>
@@ -117,15 +117,19 @@
                                 <span class="caret"></span>
                             </button>
                             <ul class="dropdown-menu" role="menu" aria-labelledby="priority">
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Low</a>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-filter=".js-low-priority">Low</a>
                                 </li>
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Medium</a>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-filter=".js-medium-priority">Medium</a>
                                 </li>
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">High</a>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-filter=".js-high-priority">High</a>
                                 </li>
                             </ul>
                         </div>
                         <!--/dropdown-->
+                        <div class="dropdown left">
+                            <button class="btn btn-default" type="button" id="view-all" data-filter="*"><span class="glyphicon glyphicon glyphicon-eye-open" aria-hidden="true"></span> VIEW ALL
+                            </button>
+                        </div>
                     </div>
                     <!--/panel-body-->
                 </div>
@@ -134,16 +138,16 @@
             <!--/col-->
         </div>
         <!--/row-->
-        <div class="row task-container">
-            <div class="col-sm-12 col-md-6 task">
-                <div class="panel panel-default high-priority">
+        <div class="row task-container js-isotope">
+            <div class="col-sm-12 col-md-6 task js-high-priority js-not-started js-john js-client-one">
+                <div class="panel panel-default high-priority ">
                     <div class="panel-body">
                         <a href="#" class="settings right" data-toggle="modal" data-target="#editModal"><span class="glyphicon glyphicon glyphicon-cog" aria-hidden="true"></span> <p class="sr-only">Update</p></a>
                         <h3>Complete this task lorem ipsum lorem ipsum</h3>
                         <p>Ornare habitant a pretium risus eros phasellus a facilisis nibh quam parturient pharetra convallis cras morbi nullam habitasse lacinia a laoreet consequat vestibulum nulla.</p>
-                         <div class="row top-buffer">
+                        <div class="row top-buffer">
                             <div class="col-sm-12 task-legend">
-                                <div><span class="glyphicon glyphicon glyphicon-briefcase" aria-hidden="true"></span> Client Name</div>
+                                <div><span class="glyphicon glyphicon glyphicon-briefcase" aria-hidden="true"></span> Client One</div>
                                 <div><span class="glyphicon glyphicon glyphicon-user" aria-hidden="true"></span> John</div>
                                 <div><span class="glyphicon glyphicon glyphicon-flag" aria-hidden="true"></span> Not started</div>
                                 <div><span class="glyphicon glyphicon glyphicon-calendar" aria-hidden="true"></span> Due: May 30, 2015</div>
@@ -153,46 +157,25 @@
                 </div>
             </div>
             <!--/task-->
-            <div class="col-sm-12 col-md-6 task">
+            <div class="col-sm-12 col-md-6 task js-medium-priority js-in-progress js-sasha js-client-two">
                 <div class="panel panel-default med-priority">
                     <div class="panel-body">
                         <a href="#" class="settings right" data-toggle="modal" data-target="#editModal"><span class="glyphicon glyphicon glyphicon-cog" aria-hidden="true"></span> <p class="sr-only">Update</p></a>
-                        <h3>Complete this task lorem ipsum lorem ipsum</h3>
+                        <h3>Complete this task lorem ipsum c ipsum</h3>
                         <p>Ornare habitant a pretium risus eros phasellus a facilisis nibh quam parturient pharetra convallis cras morbi nullam habitasse lacinia a laoreet consequat vestibulum nulla.</p>
-                         <div class="row top-buffer">
+                        <div class="row top-buffer">
                             <div class="col-sm-12 task-legend">
-                                <div><span class="glyphicon glyphicon glyphicon-briefcase" aria-hidden="true"></span> Client Name</div>
-                                <div><span class="glyphicon glyphicon glyphicon-user" aria-hidden="true"></span> John</div>
-                                <div><span class="glyphicon glyphicon glyphicon-flag" aria-hidden="true"></span> Not started</div>
-                                <div><span class="glyphicon glyphicon glyphicon-calendar" aria-hidden="true"></span> Due: May 30, 2015</div>
+                                <div><span class="glyphicon glyphicon glyphicon-briefcase" aria-hidden="true"></span> Client Two</div>
+                                <div><span class="glyphicon glyphicon glyphicon-user" aria-hidden="true"></span> Sasha</div>
+                                    <div><span class="glyphicon glyphicon glyphicon-flag" aria-hidden="true"></span> Not started</div>
+                                    <div><span class="glyphicon glyphicon glyphicon-calendar" aria-hidden="true"></span> Due: May 30, 2015</div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
             </div>
             <!--/task-->
-        </div>
-        <!--/row-->
-        <div class="row task-container">
-            <div class="col-sm-12 col-md-6 task">
-                <div class="panel panel-default low-priority">
-                    <div class="panel-body">
-                        <a href="#" class="settings right" data-toggle="modal" data-target="#editModal"><span class="glyphicon glyphicon glyphicon-cog" aria-hidden="true"></span> <p class="sr-only">Update</p></a>
-                        <h3>Complete this task lorem ipsum lorem ipsum</h3>
-                        <p>Ornare habitant a pretium risus eros phasellus a facilisis nibh quam parturient pharetra convallis cras morbi nullam habitasse lacinia a laoreet consequat vestibulum nulla.</p>
-                         <div class="row top-buffer">
-                            <div class="col-sm-12 task-legend">
-                                <div><span class="glyphicon glyphicon glyphicon-briefcase" aria-hidden="true"></span> Client Name</div>
-                                <div><span class="glyphicon glyphicon glyphicon-user" aria-hidden="true"></span> John</div>
-                                <div><span class="glyphicon glyphicon glyphicon-flag" aria-hidden="true"></span> Not started</div>
-                                <div><span class="glyphicon glyphicon glyphicon-calendar" aria-hidden="true"></span> Due: May 30, 2015</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--/task-->
-            <div class="col-sm-12 col-md-6 task">
+            <div class="col-sm-12 col-md-6 task js-low-priority js-needs-review js-joe js-client-three">
                 <div class="panel panel-default low-priority">
                     <div class="panel-body">
                         <a href="#" class="settings right" data-toggle="modal" data-target="#editModal"><span class="glyphicon glyphicon glyphicon-cog" aria-hidden="true"></span> <p class="sr-only">Update</p></a>
@@ -200,9 +183,27 @@
                         <p>Ornare habitant a pretium risus eros phasellus a facilisis nibh quam parturient pharetra convallis cras morbi nullam habitasse lacinia a laoreet consequat vestibulum nulla.</p>
                         <div class="row top-buffer">
                             <div class="col-sm-12 task-legend">
-                                <div><span class="glyphicon glyphicon glyphicon-briefcase" aria-hidden="true"></span> Client Name</div>
-                                <div><span class="glyphicon glyphicon glyphicon-user" aria-hidden="true"></span> John</div>
-                                <div><span class="glyphicon glyphicon glyphicon-flag" aria-hidden="true"></span> Not started</div>
+                                <div><span class="glyphicon glyphicon glyphicon-briefcase" aria-hidden="true"></span> Client Three</div>
+                                <div><span class="glyphicon glyphicon glyphicon-user" aria-hidden="true"></span> Joe</div>
+                                <div><span class="glyphicon glyphicon glyphicon-flag" aria-hidden="true"></span> Needs review</div>
+                                <div><span class="glyphicon glyphicon glyphicon-calendar" aria-hidden="true"></span> Due: May 30, 2015</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/task-->
+            <div class="col-sm-12 col-md-6 task js-low-priority js-pending-approval js-joe js-client-one">
+                <div class="panel panel-default low-priority">
+                    <div class="panel-body">
+                        <a href="#" class="settings right" data-toggle="modal" data-target="#editModal"><span class="glyphicon glyphicon glyphicon-cog" aria-hidden="true"></span> <p class="sr-only">Update</p></a>
+                        <h3>Complete this task lorem ipsum lorem ipsum</h3>
+                        <p>Ornare habitant a pretium risus eros phasellus a facilisis nibh quam parturient pharetra convallis cras morbi nullam habitasse lacinia a laoreet consequat vestibulum nulla.</p>
+                        <div class="row top-buffer">
+                            <div class="col-sm-12 task-legend">
+                                <div><span class="glyphicon glyphicon glyphicon-briefcase" aria-hidden="true"></span> Client One</div>
+                                <div><span class="glyphicon glyphicon glyphicon-user" aria-hidden="true"></span> Joe</div>
+                                <div><span class="glyphicon glyphicon glyphicon-flag" aria-hidden="true"></span> Pending approval</div>
                                 <div><span class="glyphicon glyphicon glyphicon-calendar" aria-hidden="true"></span> Due: May 30, 2015</div>
                             </div>
                         </div>
@@ -211,7 +212,7 @@
             </div>
             <!--/task-->
         </div>
-        <!--/row-->
+        <!--/task-container-->
     </div>
     <!--/main container-->
 
@@ -380,6 +381,7 @@
     <script src="bower_components/moment/moment.js"></script>
     <script src="bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
     <script src="bower_components/eonasdan-bootstrap-datetimepicker/src/js/bootstrap-datetimepicker.js"></script>
+    <script src="bower_components/isotope/dist/isotope.pkgd.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
