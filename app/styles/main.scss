@@ -44,7 +44,11 @@ textarea:active,
 button:active,
 .btn:focus,
 .btn:active:focus,
-.btn.active:focus {
+.btn.active:focus,
+a:focus,
+a:active,
+a:active:focus,
+a.active:focus{
     outline: none;
     box-shadow: none;
     outline-color: transparent;
@@ -142,6 +146,7 @@ ul.navmenu-nav {
         
         a {
             color: #212121; 
+            text-decoration: none;
             
             &:hover {
                 text-decoration: none;

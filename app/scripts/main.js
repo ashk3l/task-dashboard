@@ -25,5 +25,11 @@ $(document).ready(function () {
             filter: filterValue
         });
     });
+    
+    $(".isotope-reset button.reset a").click(function(){
+        $(".task-container").isotope({
+            filter: '*'
+        });
+    });
 
 });
